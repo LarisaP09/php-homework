@@ -1,6 +1,7 @@
 <?php
 require_once "pdo.php";
 
+
 $username =$lastname = $firstname =$email = $password  = "";
 $username_err = $lastname_err =$firstname_err = $email_err = $password_err = "";
  

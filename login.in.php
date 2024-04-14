@@ -1,9 +1,13 @@
 <?php
 session_start();
- 
+$navbar_label="Login";
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
-    exit;
+    $navbar_link = "../php-connection/logout.php"; // Pagina de logout
+    $navbar_label = "Logout";
+} else {
+    $navbar_link = "../php-connection/indexlog.php"; // Pagina de login
+    $navbar_label="Sign up";
+    
 }
  
 require_once "pdo.php";
@@ -50,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["user_id"] = $id;
                             $_SESSION["user_username"] = $username;                            
                             
-                            header("location: welcome.php");
+                            header("location: ../pages/index.php");
                         } else{
                             $login_err = "Invalid username or password.";
                         }
