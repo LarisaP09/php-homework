@@ -1,5 +1,5 @@
 <?php
-require_once "login.in.php";
+require_once "../php-connection/login.in.php";
 include 'd:\laragon\www\proiect php\navigation\navigation.php'
 ?>
 

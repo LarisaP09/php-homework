@@ -1,5 +1,5 @@
 <?php
-require_once "register.php";
+require_once "./register.php";
 include 'd:\laragon\www\proiect php\navigation\navigation.php'
 ?>
 
